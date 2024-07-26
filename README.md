@@ -14,9 +14,8 @@ This project is built in within SpringBoot and mongoDb
 ]
 by using 
 http://localhost:8080/api/batteries -----> POST API
-this API
 
-- for get Methid use the following api
+- for get Method use the following api
   http://localhost:8080/api/batteries?startPostcode={n}&endPostcode={n} -----> Get API
 
 These API can be used using postman as well 
