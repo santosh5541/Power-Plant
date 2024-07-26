@@ -84,6 +84,6 @@ public class BatteryRestControllerTest {
       batteryRestController.addBatteries(batteries);
     });
     assertEquals(HttpStatus.BAD_REQUEST, exception.getStatusCode());
-    assertEquals("", exception.getReason());
+    assertEquals("Invalid", exception.getReason());
   }
 }

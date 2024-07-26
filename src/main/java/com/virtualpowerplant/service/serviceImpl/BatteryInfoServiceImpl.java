@@ -12,16 +12,36 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Implementation of the BatteryInfoService interface.
+ * This service provides methods to add batteries and retrieve battery information based on postcode range.
+ *
+ * @author santosh
+ * @since 26 July 2024
+ */
 @Service
 @RequiredArgsConstructor
 public class BatteryInfoServiceImpl implements BatteryInfoService {
   private final BatteryRepository batteryRepository;
 
+  /**
+   * Adds a list of batteries to the repository.
+   *
+   * @param batteries the list of Battery objects to be added.
+   * @return the list of saved Battery objects.
+   */
   @Override
   public List<Battery> addBatteries(List<Battery> batteries) {
     return batteryRepository.saveAll(batteries);
   }
 
+  /**
+   * Retrieves a list of batteries within a specified postcode range.
+   *
+   * @param startPostcode the starting postcode of the range (inclusive).
+   * @param endPostcode   the ending postcode of the range (inclusive).
+   * @return a list of BatteryResponse objects that fall within the specified postcode range.
+   */
   @Override
   public List<BatteryResponse> getBatteriesByPostcodeRange(String startPostcode, String endPostcode) {
     List<Battery> batteries = batteryRepository.findByPostcodeBetween(startPostcode, endPostcode).stream()
@@ -49,6 +69,13 @@ public class BatteryInfoServiceImpl implements BatteryInfoService {
     return responses;
   }
 
+  /**
+   * Calculates battery statistics for a list of batteries with the same name.
+   *
+   * @param sameNameBatteries the list of batteries with the same name.
+   * @param totalBatteries    the total number of batteries.
+   * @return the calculated BatteryStatistics object.
+   */
   @Override
   public BatteryStatistics calculateBatteryStatistics(List<Battery> sameNameBatteries, int totalBatteries) {
     int totalWattCapacity = sameNameBatteries.stream().mapToInt(Battery::getWattCapacity).sum();

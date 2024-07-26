@@ -1,4 +1,5 @@
 package com.virtualpowerplant.dto.modelDto;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,8 +16,8 @@ public class BatteryRequestDtoTest {
   @Test
   public void testSetAndGetBatteryName() {
     BatteryRequestDto batteryRequestDto = new BatteryRequestDto();
-    batteryRequestDto.setBatteryName("TestBattery");
-    assertEquals("TestBattery", batteryRequestDto.getBatteryName());
+    batteryRequestDto.setBatteryName("Battery");
+    assertEquals("Battery", batteryRequestDto.getBatteryName());
   }
 
   @Test

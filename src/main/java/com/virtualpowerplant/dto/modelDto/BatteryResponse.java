@@ -5,6 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Data Transfer Object for battery responses.
+ * This class is used to encapsulate the data for returning battery information.
+ *
+ * @author santosh
+ * @since 26 July 2024
+ */
 @Getter
 @Setter
 @AllArgsConstructor

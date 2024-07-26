@@ -5,6 +5,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * Document representing battery information.
+ * This class is used to encapsulate the data of a battery.
+ *
+ * @author santosh
+ * @since 26 July 2024
+ */
 @Document("batteryInfo")
 @Setter
 @Getter

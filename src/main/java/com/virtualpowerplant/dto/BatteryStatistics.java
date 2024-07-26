@@ -6,6 +6,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * Document representing battery statistics.
+ * This class is used to encapsulate the statistical data of batteries.
+ *
+ * @author santosh
+ * @since 26 July 2024
+ */
 @Document("batteryStatistics")
 @Getter
 @Setter

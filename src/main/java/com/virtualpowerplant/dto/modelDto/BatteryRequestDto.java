@@ -4,6 +4,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Data Transfer Object for battery requests.
+ * This class is used to encapsulate the data for creating or updating a battery.
+ *
+ * @author santosh
+ * @since 26 July 2024
+ */
 @Getter
 @Setter
 @NoArgsConstructor

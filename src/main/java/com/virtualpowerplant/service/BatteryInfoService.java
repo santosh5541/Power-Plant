@@ -6,6 +6,12 @@ import com.virtualpowerplant.model.Battery;
 
 import java.util.List;
 
+/**
+ * Service interface for managing battery information.
+ *
+ * @author santosh
+ * @since 26 July 2024
+ */
 public interface BatteryInfoService {
   List<Battery> addBatteries(List<Battery> batteries);
 
