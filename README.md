@@ -1,4 +1,4 @@
-This project is built in with SpringBoot with mongoDb 
+This project is built in within SpringBoot and mongoDb 
 
 - TO Test API
 - first: Open Swagger - http://localhost:8080/swagger-ui/index.html
